@@ -81,6 +81,10 @@ public class UI {
 		System.out.println("Turn : " + chessMatch.getTurn());
 		String player = (chessMatch.getCurrentPlayer() == Color.WHITE)  ? ANSI_WHITE : ANSI_YELLOW;
 		System.out.println("Waiting player: " + player + chessMatch.getCurrentPlayer() + ANSI_RESET);
+		
+		if (chessMatch.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 	
 	public static ChessPosition readChessPosition(Scanner sc) {
